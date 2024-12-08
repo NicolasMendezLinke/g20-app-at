@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #2c3e50; /* Fundo azul-escuro */
+  color: #ecf0f1; /* Texto claro */
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #34495e; /* Fundo azul-acizentado */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de profundidade */
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  flex: 1;
+  padding: 20px; /* Removido aspas */
+  gap: 20px; /* Espaçamento entre elementos da grade */
+}
+
+.grid > * {
+  background-color: #1abc9c; /* Fundo verde para elementos */
+  padding: 15px;
+  border-radius: 8px;
+  color: #2c3e50; /* Texto escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); /* Leve aumento */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+  }
+}
+
+main {
+  padding: 4rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  background-color: #2c3e50; /* Fundo azul-escuro */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito interno */
+  border-radius: 10px; /* Bordas arredondadas */
+}

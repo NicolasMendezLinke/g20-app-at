@@ -10,10 +10,11 @@ const Container = styled.div`
   align-items: flex-start;
   max-width: 1200px;
   margin: 20px auto;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  background-color: #34495e; /* Azul mais escuro */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  border-radius: 12px; /* Borda mais arredondada */
   font-family: "Arial", sans-serif;
+  color: #ecf0f1; /* Texto claro */
 `;
 
 const Header = styled.div`
@@ -21,7 +22,7 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #1abc9c; /* Verde vibrante */
   padding-bottom: 10px;
   margin-bottom: 20px;
 `;
@@ -29,7 +30,9 @@ const Header = styled.div`
 const Title = styled.h2`
   font-size: 2rem;
   margin: 0;
-  color: #333;
+  color: #1abc9c; /* Verde vibrante */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 `;
 
 const InfoGrid = styled.div`
@@ -41,13 +44,13 @@ const InfoGrid = styled.div`
 
 const Info = styled.div`
   font-size: 1rem;
-  color: #555;
-  strong {
-    color: #007bff;
-  }
-  background-color: #f9f9f9;
+  color: #ecf0f1; /* Texto claro */
+  background-color: #34495e; /* Fundo consistente com o tema */
   padding: 15px;
   border-radius: 8px;
+  strong {
+    color: #1abc9c; /* Verde vibrante */
+  }
 `;
 
 const AuthoritiesSection = styled.div`
@@ -58,8 +61,8 @@ const AuthoritiesSection = styled.div`
 const AuthoritiesTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #444;
-  border-bottom: 1px solid #ddd;
+  color: #ecf0f1; /* Texto claro */
+  border-bottom: 1px solid #16a085; /* Verde mais escuro */
   padding-bottom: 5px;
 `;
 
@@ -72,35 +75,39 @@ const AuthorityList = styled.ul`
 
   li {
     padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #2c3e50; /* Azul escuro */
+    border: 1px solid #34495e; /* Azul mais escuro */
     border-radius: 5px;
     font-size: 0.9rem;
-    color: #333;
+    color: #ecf0f1; /* Texto claro */
   }
 `;
 
 const NoAuthoritiesMessage = styled.p`
   font-size: 1rem;
-  color: #888;
+  color: #bdc3c7; /* Cinza claro */
   margin: 20px 0;
 `;
 
 const Button = styled.button`
   margin-top: 20px;
   padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #1abc9c; /* Verde vibrante */
+  color: #2c3e50; /* Texto escuro */
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   align-self: flex-start;
+  font-weight: bold;
+
   &:hover {
-    background-color: #0056b3;
+    background-color: #16a085; /* Verde mais escuro */
+    transform: scale(1.05); /* Leve aumento */
   }
 `;
+
 
 const Countries = ({ selectedCountry, authorities }) => {
   const navigate = useNavigate();
